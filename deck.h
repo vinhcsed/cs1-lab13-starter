@@ -43,7 +43,7 @@ class Deck {
             returns the index of the first occurence
             of a Card in the deck */
         // Must implement using BINARY SEARCH
-        int find(const Card&);
+        int find(const Card&) const;
 };
 
 ostream& operator<<(ostream&, const Deck&);
