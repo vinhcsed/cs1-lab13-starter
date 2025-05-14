@@ -44,13 +44,13 @@ class Deck {
         /* void Deck::sort()
             sorts the deck in rank/suit order */
         // Must implement using SELECTION SORT
-        void sort();
+        void order();
 
         /* int Deck::find(const Card&)
             returns the index of the first occurence
             of a Card in the deck */
         // Must implement using BINARY SEARCH
-        int find(const Card&) const;
+        int search(const Card&) const;
 };
 
 ostream& operator<<(ostream&, const Deck&);
