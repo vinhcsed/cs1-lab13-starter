@@ -16,6 +16,7 @@ void testBasicDeck() {
     ostringstream oss;
     
     oss << deck;
+    cout << deck;
     assertTrue(
         "Constructor",
         oss.str() ==
@@ -152,11 +153,59 @@ void testEmpty() {
     );
 }
 
+void testSort() {
+    cout << "SORT TEST" << endl;
+    Deck deck;
+    ostringstream d, r;
+
+    deck.draw();
+    deck.draw();
+    d << deck;
+    deck.shuffle();
+    deck.order();
+    r << deck;
+
+    assertTrue(
+        "size",
+        deck.getSize() == 50
+    );
+    assertTrue(
+        "ordering",
+        d.str() == r.str()
+    );
+    assertTrue(
+        "top",
+        deck.peek().rank == 1
+        && deck.peek().suit == 'H'
+    );
+}
+
+void testSearch() {
+    cout << "SEARCH TEST" << endl;
+    Deck partialDeck;
+    Deck fullDeck;
+
+    partialDeck.shuffle();
+    Card removed = partialDeck.draw();
+    partialDeck.order();
+    
+    assertTrue(
+        "not present",
+        partialDeck.search(removed) == -1
+    );
+    assertTrue(
+        "present",
+        fullDeck.search({6, 'H'}) == 22
+    );
+}
+
 int main() {
     srand(time(0));
     testBasicDeck();
     testCopy();
     testAssignment();
     testEmpty();
+    testSort();
+    testSearch();
     return 0;
 }
