@@ -41,12 +41,12 @@ class Deck {
             update assignment to return this object */
         Deck& operator=(const Deck&);
 
-        /* void Deck::sort()
+        /* void Deck::order()
             sorts the deck in rank/suit order */
         // Must implement using SELECTION SORT
         void order();
 
-        /* int Deck::find(const Card&)
+        /* int Deck::search(const Card&)
             returns the index of the first occurence
             of a Card in the deck */
         // Must implement using BINARY SEARCH
