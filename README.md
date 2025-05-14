@@ -12,10 +12,12 @@
    - Open a Terminal. Type `make` and press return. Your program should compile and run.
 
 ## Assignment Specification
-### Pick a Card
-* Complete a class that simulates a [standard 52-deck of cards](https://en.wikipedia.org/wiki/Standard_52-card_deck).
-* Implement all methods declared for class **Deck** in `deck.cpp`.
+### Pick a Card pt. 2
+* Update your class from *Lab 11* that simulates a [standard 52-deck of cards](https://en.wikipedia.org/wiki/Standard_52-card_deck).
+  - The class use a `vector` as a container for the cards
+* Update and/or implement all methods declared for class **Deck** in `deck.cpp`.
 * **DO NOT** modify `deck.h` or `card.h`.
+* **DO NOT** use any additional libraries.
 * The provided `main.cpp` tests the basic functionality of your class. You are encouraged to add more tests to further validate your code.
 
 ## Submission
