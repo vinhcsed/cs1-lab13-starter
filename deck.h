@@ -20,7 +20,7 @@ class Deck {
         // Vector to represent a deck of Cards
         vector<Card> cards;
         // Helper function to compare Cards
-        bool comesBefore(const Card&, const Card&);
+        bool comesBefore(const Card&, const Card&) const;
         
 
     public:
